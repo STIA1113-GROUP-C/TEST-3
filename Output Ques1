@@ -1,0 +1,14 @@
+Enter the number of words: 6
+Enter words: 
+hello
+world
+hello
+germany
+hello
+berlin
+
+Word count: 
+hello, 3
+world, 1
+germany, 1
+berlin, 1
