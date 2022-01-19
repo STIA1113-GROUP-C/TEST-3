@@ -1,0 +1,41 @@
+package labTest;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Q1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		countRepeatedWords();
+	}
+		
+	public static void countRepeatedWords()
+	{
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the number of words: ");
+		int num = sc.nextInt();
+		
+		String word [] = new String[num];
+		System.out.println("Enter words: ");
+		for (int i=0; i<num; i++)
+			word[i] = sc.next();
+		
+		System.out.println("");
+		System.out.println("Word count: ");
+		
+		int repeat=1;
+	      for(int i=0;i<word.length;i++) {
+	         for(int j=i+1;j<word.length;j++) 
+	         {   
+	         if(word[i].equals(word[j])) {  
+	               repeat=repeat+1;
+	               word[j]="0";
+	            }
+	         }
+	         if(word[i]!="0")
+	         System.out.println(word[i]+", "+repeat);
+	         repeat=1;     
+		}
+	}
+
+}
